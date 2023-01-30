@@ -41,10 +41,9 @@ table.container td{
     border: 3px solid rgba(0,0,0,0.1);
     color: rgba(0,0,0,0.4);
     cursor: pointer;
-    /* display: none; */
     transition: all 0.4s;
     border-radius: 10px;
-    visibility: hidden;
+    display: none;
 }
 
 .btn:hover{
