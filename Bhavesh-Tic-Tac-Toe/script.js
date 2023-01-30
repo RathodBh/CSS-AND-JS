@@ -27,9 +27,9 @@ b_AllTd.forEach((b_currentTd) => {
 const checkInnerPattern = (b1, b2, b3, b_symbol) => {
 
     if (b_AllTd[b1].innerText == b_symbol && b_AllTd[b2].innerText == b_symbol && b_AllTd[b3].innerText == b_symbol) {
-        b_AllTd[b1].style.background = "silver"
-        b_AllTd[b2].style.background = "silver"
-        b_AllTd[b3].style.background = "silver"
+        b_AllTd[b1].classList.add("silver");
+        b_AllTd[b2].classList.add("silver")
+        b_AllTd[b3].classList.add("silver")
         b_checkWin++;
 
         (b_symbol == "X") ? b_XScore++ : b_OScore++;
@@ -79,8 +79,10 @@ const restartGame = () => {
     // window.location.reload();
     b_AllTd.forEach((cur) => {
         cur.classList.remove("clicked");
+        cur.classList.remove("silver");
         cur.innerText = "";
-        cur.style.background = "white"
+        cur.classList.add("white");
+        // cur.style.background = white;
     })
     b_Sel(".btn").style.display = "none"
     b_checkWin = 0;
