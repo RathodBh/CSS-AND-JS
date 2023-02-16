@@ -306,7 +306,7 @@ function startGame() {
         for (let i = 0; i < snake.length - 2; i++) {
 
             if ((snake[i][0] == snake[snake.length - 1][0]) && (snake[i][1] == snake[snake.length - 1][1])) {
-                gameOver()
+                gameOver();i =snake.length-2
             }
         }
         for (let i = 0; i < snake.length - 1; i++) {
