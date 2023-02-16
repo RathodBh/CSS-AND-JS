@@ -295,9 +295,10 @@ function startGame() {
             alert("Game over!!\n\n congrats\n You did new high score :) ");
         }
 
-        if (ii == 0)
+         if (ii == 0){
             alert("Game over !!\n\n This is not easy as you imagine :( ")
-        window.location.reload()
+            window.location.reload()
+        }
     }
 
 
