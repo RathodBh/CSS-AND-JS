@@ -275,29 +275,35 @@ function startGame() {
         if ((parseInt(localStorage.getItem("snakeEasy")) < score || !localStorage.getItem("snakeEasy")) && level == "easy") {
             localStorage.setItem("snakeEasy", score)
             alert("Game over!!\n\n congrats\n You did new high score :) ");
+            window.location.reload()
+            window.location.reload()
             ii++;
         }
         if ((parseInt(localStorage.getItem("snakeMedium")) < score || !localStorage.getItem("snakeMedium")) && level == "medium") {
             localStorage.setItem("snakeMedium", score)
+            
             ii++;
             alert("Game over!!\n\n congrats\n You did new high score :) ");
+            window.location.reload()
 
         }
         if ((parseInt(localStorage.getItem("snakeHard")) < score || !localStorage.getItem("snakeHard")) && level == "hard") {
             localStorage.setItem("snakeHard", score)
             ii++;
             alert("Game over!!\n\n congrats\n You did new high score :) ");
+            window.location.reload()
 
         }
         if ((parseInt(localStorage.getItem("snakeVHard")) < score || !localStorage.getItem("snakeVHard")) && level == "vhard") {
             localStorage.setItem("snakeVHard", score)
             ii++;
             alert("Game over!!\n\n congrats\n You did new high score :) ");
+            window.location.reload()
         }
 
          if (ii == 0){
             alert("Game over !!\n\n This is not easy as you imagine :( ")
-            window.location.reload()
+             window.location.reload()
         }
     }
 
