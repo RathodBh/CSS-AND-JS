@@ -216,4 +216,6 @@ tr > td{
         outline: none;
         font-size: 14vw;
     }
+  #txt{
+    display:none;
 }
