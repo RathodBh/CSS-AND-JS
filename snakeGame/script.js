@@ -101,8 +101,12 @@ function startGame() {
     }
 
     //onclick focus
-    document.onclick = function (e) {
-        mySel("#txt").focus();
+    var width = document.body.clientWidth;
+
+    if(width > 576){
+        document.onclick = function (e) {
+            mySel("#txt").focus();
+        }
     }
 
     //checkMove
