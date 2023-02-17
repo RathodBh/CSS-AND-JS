@@ -33,12 +33,13 @@ allBtns.forEach((curBtn) => {
     curBtn.addEventListener("click", (e) => {
         if (!curBtn.classList.contains("btn8")) {
 
-            mySel(".subtitle").innerHTML = `moves: <span class="red">${moves++}</span>`;
+            mySel(".subtitle").innerHTML = `moves: <span class="red">${moves}</span>`;
 
             let currentBtnIndex = [...allBtns].indexOf(curBtn);
 
             if (currentBtnIndex == 0 || currentBtnIndex == 1 || currentBtnIndex == 3 || currentBtnIndex == 4 || currentBtnIndex == 6 || currentBtnIndex == 7) {
                 if (allBtns[currentBtnIndex + 1].classList.contains("btn8")) {
+                  ++moves;
                     curBtn.classList.add("btn8");
                     curBtn.classList.add("clear");
                     curBtn.classList.remove("btn" + currentBtnIndex);
@@ -61,7 +62,7 @@ allBtns.forEach((curBtn) => {
                     curBtn.classList.add("btn8");
                     curBtn.classList.add("clear");
                     curBtn.classList.remove(tmpClass);
-
+                    ++moves;
                     let tempNum = curBtn.innerText;
                     curBtn.innerText = ""
                     allBtns[currentBtnIndex - 1].classList.remove("btn8")
@@ -73,12 +74,13 @@ allBtns.forEach((curBtn) => {
                     checkWin()
                 }
             }
+          
             //up
             if (currentBtnIndex == 3 || currentBtnIndex == 4 || currentBtnIndex == 5 || currentBtnIndex == 6 || currentBtnIndex == 7 || currentBtnIndex == 8) {
                 if (allBtns[currentBtnIndex - 3].classList.contains("clear")) {
 
                     let tmpClass = curBtn.classList[1];
-
+                    ++moves;
                     curBtn.classList.add("btn8");
                     curBtn.classList.add("clear");
                     curBtn.classList.remove(tmpClass);
@@ -100,7 +102,7 @@ allBtns.forEach((curBtn) => {
                 if (allBtns[currentBtnIndex + 3].classList.contains("clear")) {
 
                     let tmpClass = curBtn.classList[1];
-
+                    ++moves;
                     curBtn.classList.add("btn8");
                     curBtn.classList.add("clear");
                     curBtn.classList.remove(tmpClass);
@@ -144,6 +146,7 @@ function checkWin(){
     }
 }
 
+//restart the game
 mySel(".reset").addEventListener("click",()=>{
    if(confirm("Are you sure want to restart ?")){
     window.location.reload()
