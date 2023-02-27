@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Snake Game</h1>
+    <div class="container">
+        <div class="upper">
+            <h3>Score: <span id="score"></span></h3>
+            <h3>High Score<span id="level"></span> :<span id="high-score">0</span></h3>
+        </div>
+        <canvas width="500" height="500"></canvas>
+        <div class="bottom">
+            <div class="mobileBtns">
+                <div class="r1">
+                    <a id="1">↖️</a>
+                    <a id="ArrowUp">⬆️</a>
+                    <a id="2">↗️</a>
+                </div>
+                <div class="r2">
+                    <a id="ArrowLeft">⬅️</a>
+                    <a id=" ">🛑</a>
+                    <a id="ArrowRight">➡️</a>
+                </div>
+                <div class="r3">
+                    <a id="3">↙️</a>
+                    <a id="ArrowDown">⬇️</a>
+                    <a id="4">↘️</a>
+                </div>
+            </div>
+            <h3><a href="http://rathodbh.netlify.app" target="_blank" class="red" id="pause">Click Here to more</a></h3>
+        </div>
+    </div>
+
+    <div class="level">
+        <div class="box">
+            <h1 class="title"> High Score </h1>
+            <div class="">
+                <div class="d">
+                    <h3 class="title t1">Easy: <h3 class="high high1">0</h3>
+                    </h3>
+                </div>
+                <div class="d">
+                    <h3 class="title t1">Medium: <h3 class="high high2">0</h3>
+                    </h3>
+                </div>
+                <div class="d">
+                    <h3 class="title t1">Hard: <h3 class="high high3">0</h3>
+                    </h3>
+                </div>
+                <div class="d">
+                    <h3 class="title t1">Very Hard: <h3 class="high high4">0</h3>
+                    </h3>
+                </div>
+
+            </div>
+            <h1 class="title">Select Level</h1>
+            <div class="buttons">
+                <input type="button" value="Easy" class="sbtn easy" style="--bg:green">
+                <input type="button" value="Medium" class="sbtn medium" style="--bg:blue">
+                <input type="button" value="Hard" class="sbtn hard" style="--bg:blueviolet">
+                <input type="button" value="Very Hard" class="sbtn vhard" style="--bg:red">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
