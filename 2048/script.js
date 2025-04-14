@@ -23,12 +23,12 @@ function generateRandomCell(x = 0) {
         mySelAll(".cell")[n].innerHTML = randomN[generateRandomNumber(3)];
         x = 0
     } else {
-        ++x;
         if (x == 16) {
             alert("Game Over")
         } else {
             generateRandomCell(x)
         }
+        ++x;
     }
 }
 generateRandomCell()
